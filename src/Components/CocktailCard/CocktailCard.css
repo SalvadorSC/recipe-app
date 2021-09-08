@@ -1,0 +1,19 @@
+.cocktail-card {
+  width: 100%;
+  display: inline-block;
+  background-color: cornsilk;
+  border-radius: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.cocktail-card-name {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+.cocktail-img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
