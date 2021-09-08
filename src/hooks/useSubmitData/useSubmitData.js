@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export const useSubmitData = (data, setData, validateForm) => {
   let history = useHistory();
@@ -44,4 +45,10 @@ export const useSubmitData = (data, setData, validateForm) => {
     changeNewDataValue,
     errors,
   };
+};
+
+useSubmitData.propTypes = {
+  errors: PropTypes.object,
+  data: PropTypes.object,
+  newData: PropTypes.object,
 };

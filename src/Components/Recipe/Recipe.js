@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import "./Recipe.css";
 
@@ -17,6 +18,13 @@ const Recipe = ({ recipe }) => {
       </div>
     </>
   );
+};
+
+Recipe.propTypes = {
+  recipe: PropTypes.shape({
+    ingredients: PropTypes.string,
+    name: PropTypes.string,
+  }),
 };
 
 export default Recipe;

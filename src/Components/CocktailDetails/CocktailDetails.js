@@ -4,16 +4,12 @@ import "./CocktailDetails.css";
 
 const CocktailDetails = () => {
   const { id } = useParams();
-  console.log(id);
   const [cocktail, setCocktail] = useState([]);
   const getCocktail = useCallback(async () => {
     const response = await fetch(
       `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
     );
-    console.log(response);
     const data = await response.json();
-    console.log(data.drinks[0]);
-
     setCocktail(data.drinks[0]);
   }, [id]);
 

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import "./CocktailCard.css";
 import { useHistory } from "react-router-dom";
@@ -19,6 +20,14 @@ const CocktailCard = ({ cocktail }) => {
       </div>
     </>
   );
+};
+
+CocktailCard.propTypes = {
+  cocktail: PropTypes.shape({
+    idDrink: PropTypes.string,
+    strDrink: PropTypes.string,
+    strDrinkThumb: PropTypes.string,
+  }),
 };
 
 export default CocktailCard;

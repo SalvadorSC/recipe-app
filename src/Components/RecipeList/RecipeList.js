@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import RecipesContext from "../../context/RecipesContext";
 import Recipe from "../Recipe/Recipe";
 import RecipeForm from "../RecipeForm/RecipeForm";
@@ -11,10 +11,7 @@ const RecipeList = () => {
   return (
     <>
       <div className="recipe-list">
-        <div class="add-recipe-button-container">
-          {/* <Link to="/recipe-form">
-            <button className="add-recipe-button">Add recipe</button>
-          </Link> */}
+        <div className="add-recipe-button-container">
           <br />
           <button
             className="add-recipe-button"
@@ -30,6 +27,11 @@ const RecipeList = () => {
       </div>
     </>
   );
+};
+
+RecipeList.propTypes = {
+  showForm: PropTypes.bool,
+  recipes: PropTypes.object,
 };
 
 export default RecipeList;

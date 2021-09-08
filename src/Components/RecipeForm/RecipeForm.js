@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
+import PropTypes from "prop-types";
 import "./RecipeForm.css";
 import RecipesContext from "../../context/RecipesContext";
 import { useSubmitData } from "../../hooks/useSubmitData/useSubmitData";
 import { recipeFormValidator } from "./recipeFormValidator";
-const RecipeForm = (props) => {
+const RecipeForm = () => {
   const { recipes, setRecipes } = useContext(RecipesContext);
   const { submitNewdata, changeNewDataValue, errors } = useSubmitData(
     recipes,
@@ -47,6 +48,11 @@ const RecipeForm = (props) => {
       </div>
     </>
   );
+};
+
+recipeFormValidator.propTypes = {
+  showForm: PropTypes.bool,
+  recipes: PropTypes.object,
 };
 
 export default RecipeForm;
