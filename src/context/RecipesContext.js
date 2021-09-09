@@ -4,7 +4,7 @@ const RecipesContext = createContext();
 
 export const RecipesProvider = ({ children }) => {
   const [recipes, setRecipes] = useState([
-    { name: "Carbonara", ingredients: "Pasta, bacon" },
+    { name: "Carbonara", ingredients: ["Pasta", "bacon"] },
   ]);
   return (
     <RecipesContext.Provider

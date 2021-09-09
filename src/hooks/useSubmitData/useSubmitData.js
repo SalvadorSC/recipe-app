@@ -36,7 +36,7 @@ export const useSubmitData = (data, setData, validateForm) => {
     setErrors({ ...errors, [valueName]: false });
     setNewData({
       ...newData,
-      [valueName]: value,
+      [valueName]: value.split(", "),
     });
   };
 

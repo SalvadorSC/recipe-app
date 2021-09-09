@@ -1,12 +1,15 @@
+// Dependencies
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// Componentes
 import Cocktails from "./Components/Cocktails/Cocktails";
 import RecipeForm from "./Components/RecipeForm/RecipeForm";
 import RecipeList from "./Components/RecipeList/RecipeList";
+import CocktailDetails from "./Components/CocktailDetails/CocktailDetails";
+// Context
+import { RecipesProvider } from "./context/RecipesContext";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import CocktailDetails from "./Components/CocktailDetails/CocktailDetails";
-import { RecipesProvider } from "./context/RecipesContext";
 
 const App = () => {
   return (

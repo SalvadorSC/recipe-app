@@ -3,13 +3,14 @@ import CocktailCard from "../CocktailCard/CocktailCard";
 import "./Cocktails.css";
 
 const Cocktails = () => {
-  const [cocktails, setCocktails] = useState([]);
+  /* const [cocktails, setCocktails] = useState([]); */
   const getCocktails = async () => {
     const response = await fetch(
       "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
     );
     const data = await response.json();
-    setCocktails(data);
+    console.log(data);
+    /* setCocktails(data); */
   };
 
   useEffect(() => {
@@ -18,12 +19,12 @@ const Cocktails = () => {
 
   return (
     <>
-      <div className="row cocktail-list m-auto">
+      {/*  <div className="row cocktail-list m-auto">
         {cocktails.drinks &&
           cocktails.drinks.map((cocktail) => (
             <CocktailCard key={cocktail.idDrink} cocktail={cocktail} />
           ))}
-      </div>
+      </div> */}
     </>
   );
 };

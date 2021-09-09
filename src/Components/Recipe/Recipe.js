@@ -8,7 +8,13 @@ const Recipe = ({ recipe }) => {
     <>
       <div className="recipe-card">
         <p>{recipe.name}</p>
-        {showIngredients && <p>{recipe.ingredients}</p>}
+        {showIngredients && (
+          <ul className="ingredients-list">
+            {recipe.ingredients.map((ingredient) => (
+              <li>{`${ingredient[0].toUpperCase()}${ingredient.slice(1)}`}</li>
+            ))}
+          </ul>
+        )}
         <button
           className="button-show-ingredients"
           onClick={() => setShowIngredients(!showIngredients)}
